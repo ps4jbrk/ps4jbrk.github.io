@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="en" manifest="505.manifest">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#070b18"><title>Offline Cache | 5.05 - 5.07</title><link rel="stylesheet" href="style.css"></head>
+<body><div class="host-wrap"><div class="brand">Playstation 4 • ZoLDiK Host</div><h1><span class="accent">PS4 FW 5.05 - 5.07</span></h1><p class="subtitle">Preparing your offline exploit environment</p><section class="status-card"><div class="status-label">Cache installation</div><h1 id="msgs">Starting cache installation…</h1><div class="fw-pill">Please keep this page open</div></section><div class="footer">WHEN COMPLETE, CLOSE AND REOPEN THE PS4 BROWSER</div></div>
+<script>
+history.replaceState(null,null,'index.html');var histlength=history.length;history.go(-histlength);
+function DLProgress(e){var p=e.total?Math.round(e.loaded/e.total*100):0;window.msgs.textContent="Installing Offline Cache: "+p+"%";}
+function DisplayCacheProgress(){window.msgs.textContent="Cache Installed Successfully ✔";setTimeout(function(){window.msgs.textContent="Now close and reopen your browser";},1500);}
+if(window.applicationCache){window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=DisplayCacheProgress;window.applicationCache.onupdateready=DisplayCacheProgress;window.applicationCache.onerror=function(){window.msgs.textContent="Cache installation error — clear browser data and retry";};}
+</script></body></html>
