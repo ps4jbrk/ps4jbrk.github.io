@@ -67,15 +67,9 @@ function onScriptError() {
 
   function completeProgress() {
     if (finishTimer) clearInterval(finishTimer);
-    finishTimer = setInterval(function () {
-      if (value >= 100) {
-        clearInterval(finishTimer);
-        finishTimer = null;
-        if (caption) caption.textContent = "GoldHEN loaded successfully!";
-        return;
-      }
-      paint(Math.min(100, value + 2));
-    }, 25);
+    finishTimer = null;
+    paint(100);
+    if (caption) caption.textContent = "GoldHEN loaded successfully!";
   }
 
   window.setHostProgress = function (state, message) {
@@ -85,7 +79,7 @@ function onScriptError() {
       if (timer) clearInterval(timer);
       if (caption) caption.textContent = "Applying final patches...";
       var successHeading = document.getElementById("msgs");
-      if (successHeading) successHeading.textContent = "Jailbreak Completed Successfully!";
+      if (successHeading) successHeading.textContent = "✓ Jailbreak Completed Successfully!";
       document.body.className = "done";
       completeProgress();
     } else if (state === "fail") {
@@ -104,8 +98,8 @@ function onScriptError() {
     if (finished) return;
     if (value < 35) paint(value + 3);
     else if (value < 65) paint(value + 2);
-    else if (value < 90) paint(value + 1);
-    if (value >= 90) paint(90);
+    else if (value < 97) paint(value + 1);
+    if (value >= 97) paint(97);
     if (caption) {
       if (value < 25) caption.textContent = "Initializing exploit...";
       else if (value < 55) caption.textContent = "Running jailbreak process...";
