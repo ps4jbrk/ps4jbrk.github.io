@@ -85,3 +85,8 @@ body.fail .progress-caption{color:#ff9aad}
 .fw-pill{font-weight:650;letter-spacing:.15px}
 .feature{font-weight:650;letter-spacing:.1px}
 #state{font-weight:600}
+.start-button{display:flex;align-items:center;justify-content:center;width:174px;height:174px;margin:8px auto 0;border:2px solid rgba(112,231,255,.85);border-radius:50%;background:linear-gradient(145deg,#176bff 0%,#477dff 48%,#43c98b 100%);color:#fff;font-size:25px;font-weight:900;letter-spacing:2px;text-shadow:0 2px 10px rgba(0,0,0,.3);box-shadow:0 0 18px rgba(77,163,255,.42),inset 0 2px 10px rgba(255,255,255,.2);cursor:pointer;transition:transform .18s ease,filter .18s ease,box-shadow .18s ease}
+.start-button:focus,.start-button:hover{filter:brightness(1.12);transform:scale(1.035);box-shadow:0 0 25px rgba(77,163,255,.62),inset 0 2px 10px rgba(255,255,255,.24);outline:none}
+.start-button:active{transform:scale(.98)}
+.start-button[hidden],.progress-wrap[hidden]{display:none!important}
+@media(max-width:600px){.start-button{width:150px;height:150px;font-size:22px}}
