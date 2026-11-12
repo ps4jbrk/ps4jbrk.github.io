@@ -80,7 +80,7 @@ var startProgressUI = (function () {
       if (timer) clearInterval(timer);
       if (caption) caption.textContent = "Applying final patches...";
       var successHeading = document.getElementById("msgs");
-      if (successHeading) successHeading.textContent = "✓ Jailbreak Completed Successfully!";
+      if (successHeading) successHeading.textContent = "Jailbreak Completed Successfully!";
       document.body.className = "done";
       completeProgress();
     } else if (state === "fail") {
