@@ -1838,7 +1838,7 @@ kexploit().then(() => {
     setTimeout(() => {
         try {
             runPayload("./goldhen_2.4b18.13.bin");
-            msgs.innerHTML = "GoldHEN v2.4b18.13 Loaded ...";
+            msgs.innerHTML = "Jailbreak Completed Successfully!";
         } catch (e) {
             hostFail();
         }

@@ -36,7 +36,7 @@ const params = new URLSearchParams(location.search);
 function hostOk() {
   var m = document.getElementById("msgs");
   if (m) {
-    m.innerHTML = "GoldHEN v2.4b18.13 Loaded ...";
+    m.innerHTML = "Jailbreak Completed Successfully!";
   }
 }
 
